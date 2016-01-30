@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+{% load staticfiles %}
+<title>MY Attendance</title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'bootstrap-3.3.5-dist/css/bootstrap.min.css' %}">
+		<script src="{% static 'bootstrap-3.3.5-dist/js/jquery.min.js' %}"></script>
+		<script src="{% static 'bootstrap-3.3.5-dist/js/bootstrap.min.js' %}"></script>
+</head>	  
+<body>
+<div class="container" >
+  <div class="jumbotron" style="background-color:#8dce84;text-align:center;">
+    <h1>My Attendance</h1> 
+	  <a href="{% url "Logout" %}" Style="margin-left:90%;"class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+  </div>
+ 
+ <h1 style="text-align:center;color:#48955e;">S1</h1>
+ <h3 style="margin-left:480px;color:#c78778;">Month:</h3>
+ <div class="row">
+  <div class="col-sm-2"><ul class="list-group" style="min-width:200px;" data-spy="affix">
+ <li class="list-group-item list-group-item-success">Subjects</li>
+ {% for subject in subjects %}
+  <a href="{% url "StudentAttendanceSubject" title=subject.pk  %}"><li class="list-group-item">{{subject.subjectsName}}</li></a>
+ {% endfor %}
+
+</ul>
+ </div>
+ 
+ <div class="col-sm-3"></div>
+ <div class="col-sm-3">
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>P/A/N-L</th>       
+      </tr>
+    </thead>
+    <tbody>
+	{% for attendance in attendances %}
+      <tr>
+        <td>{{attendance.date}}</td>
+        <td>{{attendance.p_a}}</td>
+        <td></td>
+      </tr>
+	{% endfor %}
+     
+    </tbody>
+  </table>
+</div>
+<div class="col-sm-2"></div>
+<div class="col-sm-2">
+</div>
+</div>
+</div>

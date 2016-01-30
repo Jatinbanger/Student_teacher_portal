@@ -1,0 +1,17 @@
+from django.contrib import admin
+from .models import Student
+from .models import Teacher
+from .models import Subject
+from .models import Course_Dept
+from .models import Group
+from .models import TeacherRel
+from .models import StudentRel
+
+admin.site.register(Student)
+admin.site.register(Teacher)
+admin.site.register(Subject)
+admin.site.register(Course_Dept)
+admin.site.register(Group)
+admin.site.register(TeacherRel)
+admin.site.register(StudentRel)
+# Register your models here.

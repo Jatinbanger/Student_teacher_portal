@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>{% load staticfiles %}
+<title>MY Marks</title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'bootstrap-3.3.5-dist/css/bootstrap.min.css' %}">
+		<script src="{% static 'bootstrap-3.3.5-dist/js/jquery.min.js' %}"></script>
+		<script src="{% static 'bootstrap-3.3.5-dist/js/bootstrap.min.js' %}"></script>
+</head>	  
+<body>
+<div class="container" >
+  <div class="jumbotron" style="background-color:#8dce84;text-align:center;">
+    <h1>My Marks</h1> 
+	 <a href="{% url "Logout" %}" Style="margin-left:90%;"class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+   <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="width:300px;">Subject</th>
+         <th>Mst-1</th>
+		<th>Mst-2</th>
+		<th>Evaluation</th>
+		<th>Attendance</th>
+		<th>Sports</th>
+      </tr>
+    </thead>
+    <tbody>
+	<tr>
+        <td>{{mark.subject_id.subjectsName}}</td>
+        <td>{{mark.mst1}}</td>
+        <td>{{mark.mst2}}</td>
+		<td>{{mark.evaluation}}</td>
+        <td>{{mark.attendance}}</td>
+        <td>{{mark.sports}}</td>
+      </tr>
+      <!--tr>
+        <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+       <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+	  <tr>
+       <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+	  <tr>
+       <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+<tr>
+       <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr>
+<tr>
+       <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+        <td></td>
+      </tr-->
+
+    </tbody>
+  </table>
+</div>
+  
+  </div>
+  </div>
